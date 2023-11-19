@@ -10,7 +10,7 @@
 
 Передайте ssh-ключ в функцию template_file в блоке vars ={} . Воспользуйтесь примером. Обратите внимание, что ssh-authorized-keys принимает в себя список, а не строку.
 
-![Задание1](https://github.com/SSitkarev/terraform-04/blob/main/img/2.jpg)
+![Задание1](https://github.com/SSitkarev/terraform-04/blob/main/img/2-1.jpg)
 
 Предоставьте скриншот подключения к консоли и вывод команды sudo nginx -t.
 
