@@ -83,32 +83,24 @@
 
 Выведите список ресурсов в стейте.
 
+![Задание3](https://github.com/SSitkarev/terraform-04/blob/main/img/8.jpg)
+
 Полностью удалите из стейта модуль vpc.
+
+![Задание3](https://github.com/SSitkarev/terraform-04/blob/main/img/9.jpg)
 
 Полностью удалите из стейта модуль vm.
 
-Импортируйте всё обратно. Проверьте terraform plan. Изменений быть не должно. Приложите список выполненных команд и скриншоты процессы.
+![Задание3](https://github.com/SSitkarev/terraform-04/blob/main/img/10.jpg)
 
-## Задание 6*
+Импортируйте всё обратно. 
 
-Разверните у себя локально vault, используя docker-compose.yml в проекте.
-Для входа в web-интерфейс и авторизации terraform в vault используйте токен "education".
-Создайте новый секрет по пути http://127.0.0.1:8200/ui/vault/secrets/secret/create Path: example
-secret data key: test secret data value: congrats!
-Считайте этот секрет с помощью terraform и выведите его в output по примеру:
-provider "vault" {
- address = "http://<IP_ADDRESS>:<PORT_NUMBER>"
- skip_tls_verify = true
- token = "education"
-}
-data "vault_generic_secret" "vault_example"{
- path = "secret/example"
-}
+![Задание3](https://github.com/SSitkarev/terraform-04/blob/main/img/11.jpg)
 
-output "vault_example" {
- value = "${nonsensitive(data.vault_generic_secret.vault_example.data)}"
-} 
+![Задание3](https://github.com/SSitkarev/terraform-04/blob/main/img/12.jpg)
 
-Можно обратиться не к словарю, а конкретному ключу:
-terraform console: >nonsensitive(data.vault_generic_secret.vault_example.data.<имя ключа в секрете>)
-Попробуйте самостоятельно разобраться в документации и записать новый секрет в vault с помощью terraform.
+![Задание3](https://github.com/SSitkarev/terraform-04/blob/main/img/13.jpg)
+
+Проверьте terraform plan. Изменений быть не должно.
+
+![Задание3](https://github.com/SSitkarev/terraform-04/blob/main/img/14.jpg)
